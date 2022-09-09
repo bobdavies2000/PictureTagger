@@ -15,9 +15,9 @@ Public Class Form1
             Dim txt = Mid(fn.Name, 1, Len(fn.Name) - 4)
             cv.Cv2.PutText(output, txt, New cv.Point(0, textHeight - 10), cv.HersheyFonts.HersheyTriplex, 1.0, cv.Scalar.White, 2, cv.LineTypes.AntiAlias)
 
-            Dim randomizedName = "../../../SlideShow/r" + Format(CInt(msRNG.Next(0, 9999)), "0000") + " "
+            Dim randomizedName = "../../../SlideShow/r" + Format(CInt(msRNG.Next(0, 999999)), "000000") + " "
             cv.Cv2.ImWrite(randomizedName + "1" + fn.Name, output)
-            cv.Cv2.ImWrite(randomizedName + "2" + fn.Name, output) ' doubles the time to see the picture...
+            'cv.Cv2.ImWrite(randomizedName + "2" + fn.Name, output) ' doubles the time to see the picture...
             'cv.Cv2.ImShow("next pic", output)
             'cv.Cv2.WaitKey(1000)
         Next
