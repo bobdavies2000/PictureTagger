@@ -17,7 +17,7 @@ Public Class Form1
 
             Dim randomizedName = "../../../SlideShow/r" + Format(CInt(msRNG.Next(0, 999999)), "000000") + " "
             cv.Cv2.ImWrite(randomizedName + "1" + fn.Name, output)
-            'cv.Cv2.ImWrite(randomizedName + "2" + fn.Name, output) ' doubles the time to see the picture...
+            cv.Cv2.ImWrite(randomizedName + "2" + fn.Name, output) ' doubles the time to see the picture...
             'cv.Cv2.ImShow("next pic", output)
             'cv.Cv2.WaitKey(1000)
         Next
